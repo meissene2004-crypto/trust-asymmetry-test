@@ -50,9 +50,9 @@ if (with_independent_council == true) {
 }
 
 // Game settings for prototyping:
-var skip_consent = false
+var skip_consent = true
 var skip_demographics = true
-var skip_practice = false// enables jumping to the main block
+var skip_practice = true// enables jumping to the main block
 var do_station_only_trials = false
 var do_post_block_questionnaires = false
 var include_epistemic_trust_questionnaire = false;
