@@ -50,9 +50,9 @@ if (with_independent_council == true) {
 }
 
 // Game settings for prototyping:
-var skip_consent = true
-var skip_demographics = true
-var skip_practice = true// enables jumping to the main block
+var skip_consent = false
+var skip_demographics = false
+var skip_practice = false// enables jumping to the main block
 var do_station_only_trials = false
 var do_post_block_questionnaires = false;
 
@@ -381,8 +381,6 @@ var consent_timeline_array = [
 ]
 
 var demographics_and_info_array = [
-    plugins.prolific_id,
-    instructions.fullscreen,
     plugins.demographics,
 ]
 
@@ -407,7 +405,7 @@ timeline.push(plugins.game_over_notification)
 
 // add questionnaires
 timeline.push(plugins.demographics)
-timeline.push(plugins.post_experiment_survey)
+
 
 
 // add post experiment questionnaire
