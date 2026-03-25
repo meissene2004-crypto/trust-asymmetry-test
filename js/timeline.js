@@ -436,7 +436,7 @@ const save_data = {
     stimulus: '<p>Saving your data, please wait...</p>',
     choices: [],
     on_start: function() {
-        fetch('https://pipe.jspsych.org/api/data', {
+        fetch('https://pipe.jspsych.org/api/data/', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
