@@ -394,16 +394,16 @@ plugins.questionnaire_start = {
 
 plugins.block_over_notification  = {
     type: 'html-button-response',
-    stimulus: '<p><img src="js/img/kyberneum.png" alt="Kyberneum"></p>' +   
-        '<p>You have now finished this block and can go on to the next one.<p>',
+    stimulus: '<p><img src="js/img/piggy-bank.png" width="200"></p>' +   
+        '<p><b>You have now finished this block!</b><p>',
     choices: ['Next']
 };
 
 plugins.game_over_notification = {
     type: 'html-button-response',
-    stimulus: '<p><img src="js/img/kyberneum.png" alt="Kyberneum"></p>' +   
-        '<p>Congratulations, you have finished the final block of the game.<p>' +
-        '<p>You will now fill out a few short questionnaires before receiving your completion code.<p>',
+    stimulus: '<p><img src="js/img/piggy-bank.png" width="200"></p>' +   
+        '<p><b>Congratulations, you have finished all 4 blocks!</b></p>' +
+        '<p>You will now answer a few short questions before completing the study.</p>',
     choices: ['Next'],
     on_finish: function(){
         data_funs.save_data(
@@ -508,7 +508,7 @@ plugins.score_page = {
     stimulus: function(data){
         let final_pay_off = data_funs.get_pay_off(data, jsPsych.timelineVariable('with_independent_council'));
         let prompt = 
-            '<p><img src="js/img/kyberneum.png" alt="Kyberneum"></p>' +
+            '<p><img src="js/img/piggy-bank.png" width="200"></p>' +
             '<p>Congratulations, you have now finished this experiment.</p>' +
             '<p>Your performance translates to a <b>bonus of $' +
             final_pay_off.bonus.toFixed(2) + 

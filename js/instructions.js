@@ -962,7 +962,7 @@ function create_instructions_object(
     '<p>This study was not primarily about financial decison-making.<br>' +
     'It was designed to investigate <b>trust asymmetry</b> - specifically,<br>' +
     'how people update their trust in information sources differently<br>' +
-    'depending on whether those sources confirm or disconfirm their exxpectations.<br>' +
+    'depending on whether those sources confirm or disconfirm their expectations.<br>' +
     'This is based on the experimental paradigm developed by Schulz et al. (2025).</p>' +
     '<p>The "financial advisors" you interacted with were simulated sources<br>' +
     'with different levels of reliability. Some were more accurate than others,<br>' +
@@ -983,7 +983,7 @@ function create_instructions_object(
     instructions.final_screen_with_completion_code = {
         type: 'instructions',
         pages: [completion_code_page],
-        show_clickable_nav: false,
+        show_clickable_nav: true,
         data: {experiment_stage: "instruction"}
     };
 

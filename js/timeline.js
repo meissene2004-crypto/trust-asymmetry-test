@@ -54,8 +54,7 @@ var skip_consent = true
 var skip_demographics = true
 var skip_practice = true// enables jumping to the main block
 var do_station_only_trials = false
-var do_post_block_questionnaires = false
-var include_epistemic_trust_questionnaire = false;
+var do_post_block_questionnaires = false;
 
 // Basic task and source attributes --------------------------------------------
 
@@ -340,7 +339,7 @@ let probe_timeline = {
 
 let break_before_probe = {
     type: 'html-button-response',
-    stimulus: '<p><img src = "js/img/kyberneum.png" alt = "Kyberneum", width = "600"></p>' +'<p><b>Well done, you have finished this block!</b></p>' + '<p>You can take a short break before continuing.</p>' + '<p>When you are ready, click below to continue.</p>',
+    stimulus: '<p><img src = "js/img/piggy-bank.png" width = "200"></p>' +'<p><b>Well done, you have finished this block!</b></p>' + '<p>You can take a short break before continuing.</p>' + '<p>When you are ready, click below to continue.</p>',
     choices: ['Continue'],
 };
 one_block_timeline.push(break_before_probe);
@@ -407,28 +406,12 @@ timeline = timeline.concat(main_exp_timeline)
 timeline.push(plugins.game_over_notification)
 
 // add questionnaires
-timeline.push(plugins.world_value_survey)
-
-if (include_epistemic_trust_questionnaire) {
-    for (let i = 0; i < plugins.epistemic_trust_questionnaire_split.length; i++) { 
-        timeline.push(plugins.epistemic_trust_questionnaire_split[i])
-    }
-}
-
-timeline.push(plugins.news_source_frequency_questionnaire)
-timeline.push(plugins.news_sources_select)
-timeline.push(plugins.other_news_source)
-timeline.push(plugins.news_trust_questionnaire)
+timeline.push(plugins.demographics)
+timeline.push(plugins.post_experiment_survey)
 
 
 // add post experiment questionnaire
 timeline.push(plugins.post_experiment_survey)
-let score_page_timeline_var = {with_independent_council: with_independent_council}
-let score_page_timeline = {
-    timeline: [plugins.score_page],
-    timeline_variables: [score_page_timeline_var],
-};
-timeline = timeline.concat(score_page_timeline)
 timeline.push(instructions.after_game)
 timeline.push(instructions.final_screen_with_completion_code)
 const save_data = {
