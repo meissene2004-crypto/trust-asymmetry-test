@@ -1,0 +1,204 @@
+/* General set-up */
+body {
+  background-color: black;
+}
+#jspsych-html-slider-response-stimulus {
+  min-height:200px;
+  overflow: visible !important;
+  display: block !important;
+}
+.jspsych-display-element {
+  font-size: 18px;
+  color: white;
+}
+
+
+#consent_text {
+  text-align: justify;
+  width: 600px;
+}
+
+/* Practice Trials*/
+.practice-btn-blue,
+.practice-btn-green {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: whitesmoke;
+  background-color: #4CAF50;
+  border-color: #ccc;
+}
+
+/* Alter button defined above */
+.practice-btn-blue{
+  background-color: #008CBA;
+}
+
+/* Main trials */ 
+.council_header{
+  color: lightgrey;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+  padding: 18px;
+}  
+
+.council_header_station_only{
+  color: #414141;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+  padding: 18px;
+}  
+
+.main_display{
+  padding: 20px;
+}
+
+#register_opinion_text {
+  color: lightgray;
+  font-style: italic;
+  font-size : 15px;
+}
+
+#confidence_label {
+  font-size: 15px;
+  color: lightgray;
+  line-height: 1.3;
+}
+
+/* Feedback text */
+#feedback_prompt,
+#correct_prompt,
+#incorrect_prompt,
+#blue_correct_prompt,
+#green_correct_prompt {
+  font-weight: bold;
+}
+#correct_prompt {
+ color: #16c60c;
+}
+#incorrect_prompt {
+  color: #f03a17;
+}
+#blue_correct_prompt {
+  color:  #008CBA;
+}
+#green_correct_prompt {
+  color: #4CAF50
+}
+
+.jspsych-survey-likert-opt-label {
+  color: Gray;
+  line-height: 1.5;
+}
+
+
+/* Buttons */
+#initial_opinion_btn,
+#final_opinion_btn {
+  width: 260px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+}
+#initial_opinion_btn:disabled,
+#final_opinion_btn:disabled {
+  /* This hides the content */
+  background-color: black; 
+  color: black;
+  border-color: black;
+}
+
+#next_trial_btn {
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+/* slider */ 
+.custom-slider {
+  appearance: none;
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  width: 100%; 
+  background: transparent;
+  margin: 0px;
+}
+.custom-slider:focus {
+  outline: none;
+}
+
+/* track */
+.custom-slider::-webkit-slider-runnable-track {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: linear-gradient(90deg, rgba(230,126,34,1) 0%, rgba(255,255,255,1) 50%, rgba(155,89,182,1) 100%);
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border-radius: 2px;
+  border: 1px solid white;
+}
+.custom-slider::-moz-range-track {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: linear-gradient(90deg, rgb(230, 126, 34) 0%, rgba(255,255,255,1) 50%, rgba(155,89,182,1) 100%);
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border-radius: 2px;
+  border: 1px solid white;
+}
+.custom-slider::-ms-track {
+  appearance: none;
+  width: 99%;
+  height: 14px;
+  cursor: pointer;
+  background: #eee;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border-radius: 2px;
+  border: 1px solid #aaa;
+}
+
+/* thumb */
+.custom-slider::-webkit-slider-thumb {
+  border: 1px solid #666;
+  height: 24px;
+  width: 15px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+.custom-slider::-moz-range-thumb {
+  border: 1px solid #666;
+  height: 24px;
+  width: 15px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -9px;
+}
+.custom-slider::-ms-thumb {
+  border: 1px solid #666;
+  height: 20px;
+  width: 15px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -2px;
+}
