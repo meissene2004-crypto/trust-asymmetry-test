@@ -432,11 +432,26 @@ timeline = timeline.concat(score_page_timeline)
 timeline.push(instructions.after_game)
 timeline.push(instructions.final_screen_with_completion_code)
 const save_data = {
-    type: jsPsychPipe,
-    action: "save",
-    experiment_id: "FodkH67ndum4",
-    filename: filename,
-    data_string: ()=>jsPsych.data.get().csv()
+    type: 'html-button-response',
+    stimulus: '<p>Saving your data, please wait...</p>',
+    choices: [],
+    on_start: function() {
+        fetch('https://pipe.jspsych.org/api/data', {
+            method: 'POST',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                experimentID: 'FodkH67ndum4',
+                filename: filename,
+                data: jsPsych.data.get().csv()
+            })
+        }).then(() => {
+            jsPsych.finishTrial();
+        }).catch(() => {
+            jsPsych.finishTrial();
+        });
+        
+    }
+
 };
 timeline.push(save_data);
 
