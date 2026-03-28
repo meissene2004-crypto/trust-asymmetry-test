@@ -883,8 +883,8 @@ function create_instructions_object(
         '<p><b> Your task</b></p>' +
         '<p> On each trial, you will see endorsements from a financial advisor.<br>' +
         'Each advisor specialises in<b> two specific investment funds</b> and will endorse one of them.</p>' +
-        '<p>Each month, <b>one fund is objectively better performing than the other.</b><br>' +
-        'The advisor\'s endorsement reflects thier <i>belief</i> about which fund will perform better -<br>' +
+        '<p>Each trial, <b>one fund is objectively better performing than the other.</b><br>' +
+        'The advisor\'s endorsement reflects their <i>belief</i> about which fund will perform better -<br>' +
         'it does not necessarily reflect reality.<br>' +
         'Your job is to use the slider to indicate how confident you are that one fund will perform better. </p>' +
         '<p>Move the slider towards the fund you think is better.<br>' +
@@ -893,14 +893,14 @@ function create_instructions_object(
         // Page 3 - The advisors 
         '<p><img src="js/img/piggy-bank.png" width="200"></p>' +
         '<p><b>The financial advisors</b></p>' +
-        '<p>You will interact with <b>4 different financial advisors</b> across 4 blocks of trials.<br>' +
-        'All 4 advisors will appear in every block.</p>' +
-        '<p>Each advisor will <b>repeatedly evaluate the same two funds</b> throughout the study.<br>' +
-        'For example, one advisor will always evaluate Fund A vs Fund B,<br>' +
-        'while another will always evaluate Fund C and Fund D.<br>' +
-        'Two different advisors will never evaluate the same pair of funds.</b></p>' +
-        '<p>At the start of each block, you will see all 4 advisors<br>' +
-        'and their corresponding fund pairs.</p>' ,
+        '<p>Each advisor specializes in <b>one specific pair of funds</b> and will only ever evaluate two funds.<br>' +
+        'For example, one advisor always evaluates Fund A vs Fund B.<br>' +
+        'while another always evaluates Fund C vs Fund D.<br>' +
+        'No two advisors evaluate the same pair of funds.</p>' +
+        '<p>On each trial, you will see one advisor\'s endorsement and use it<br>' +
+        'to decide which of their two funds you think performed better that trial.</p>' +
+        '<p>The whole task is split into <b>4 blocks</b>.<br>' +
+        'At the start of each block, you will be reminded of all 4 advisors and their fund pairs.</p>',
 
         // Page 4 - Reliability
         '<p><img src="js/img/piggy-bank.png" width="200"></p>' +

@@ -20,6 +20,8 @@ let array_of_pngs_to_load = [
     'neutral_expert_5',
     'warning_left',
     'warning_right',
+    'correct_left',
+    'correct_right',
     'grey_piggybank',
     'funda_piggybank',
     'fundb_piggybank',
@@ -210,7 +212,7 @@ function make_full_html_display(
             expert_look_indicator,
             source_type
             ) 
-            console.log("news_station_html:", news_station_html);
+            //console.log("news_station_html:", news_station_html);
     }
 
     if (experiment_stage === 'practice' || !with_independent_council) {
@@ -275,16 +277,24 @@ function make_feedback_prompt(correct_colour_on_trial, slider_position, feedback
         }
         let incorrect_notification_left_when_incorrect = '<img src="js/img/warning_left.png" alt="warning" height = "125">';
         let incorrect_notification_right_when_incorrect =  '<img src="js/img/warning_right.png" alt="warning" height = "125">';
+        let correct_notification_left_when_correct = '<img src="js/img/correct_left.png" alt="correct" height = "125">';
+        let correct_notification_right_when_correct = '<img src="js/img/correct_right.png" alt="correct" height = "125">';
 
         if (correct_colour_on_trial === 'blue') {
             if (slider_position < 50) {
                 incorrect_notification_left = incorrect_notification_left_when_incorrect;
                 incorrect_notification_right = incorrect_notification_right_when_incorrect;
+            } else if (slider_position > 50) {
+                incorrect_notification_left = correct_notification_left_when_correct;
+                incorrect_notification_right = correct_notification_right_when_correct;
             }
         } else if (correct_colour_on_trial === 'green'){
             if (slider_position > 50){
                 incorrect_notification_left = incorrect_notification_left_when_incorrect;
                 incorrect_notification_right = incorrect_notification_right_when_incorrect;
+            } else if (slider_position < 50){
+                incorrect_notification_left = correct_notification_left_when_correct;
+                incorrect_notification_right = correct_notification_right_when_correct;
             }
         };
     };

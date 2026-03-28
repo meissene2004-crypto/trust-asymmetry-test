@@ -404,12 +404,12 @@ timeline = timeline.concat(main_exp_timeline)
 timeline.push(plugins.game_over_notification)
 
 // add questionnaires
-timeline.push(plugins.demographics)
+
 
 
 
 // add post experiment questionnaire
-timeline.push(plugins.post_experiment_survey)
+
 timeline.push(instructions.after_game)
 timeline.push(instructions.final_screen_with_completion_code)
 const save_data = {
