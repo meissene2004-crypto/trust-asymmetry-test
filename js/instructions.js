@@ -896,7 +896,7 @@ function create_instructions_object(
         '<p>Each advisor specializes in <b>one specific pair of funds</b> and will only ever evaluate two funds.<br>' +
         'For example, one advisor always evaluates Fund A vs Fund B,<br>' +
         'while another always evaluates Fund C vs Fund D.<br>' +
-        'No two advisors evaluate the same pair of funds.</p>' +
+        'No two advisors will evaluate the same pair of funds.</p>' +
         '<p>On each trial, you will see one advisor\'s endorsement and use it<br>' +
         'to decide which of their two funds you think performed better that trial.</p>' +
         '<p>The whole task is split into <b>4 blocks</b>.<br>' +
@@ -922,9 +922,9 @@ function create_instructions_object(
         'it does not necessarily reflect reality. Some advisors are more accurate than the others!</p>' +
         '<p>The piggy bank will change color to match the winning fund:<br>' +
         '<p>Here is an example of <b>correct</b> feedback - you selected Fund X and Fund X performed better:</p>' +
-        '<p><img src="js/img/correct_left.png" height="80"><img src="js/img/fundx_piggybank.png" height="80"></p>' +
+        '<p><img src="js/img/correct_left.png" height="80"><img src="js/img/fundx_piggybank.png" height="125"><img src="js/img/correct_right.png" height="80"></p>' +
         '<p>Here is an example of <b>incorrect</b> feedback - you selected Fund X but Fund Y performed better:</p>' +
-        '<p><img src="js/img/warnig_left.png" height="80"><img src="js/img/fundy_piggybank.png" height="125"><img src="js/img/warning_right.png" height="80"></p>' +
+        '<p><img src="js/img/warning_left.png" height="80"><img src="js/img/fundy_piggybank.png" height="125"><img src="js/img/warning_right.png" height="80"></p>' +
         '<p>Use this feedback to learn about each advisor\'s reliability.</p>' ,
 
          //Page 6 - Structure 
