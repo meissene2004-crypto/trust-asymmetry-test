@@ -419,7 +419,7 @@ const save_data = {
     on_start: function() {
         fetch('https://pipe.jspsych.org/api/data/', {
             method: 'POST',
-            headers: {'Content-type': 'application/json'},
+            headers: {'Content-Type': 'application/json', Accept:'*/*'},
             body: JSON.stringify({
                 experimentID: 'FodkH67ndum4',
                 filename: filename,
