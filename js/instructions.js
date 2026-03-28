@@ -894,7 +894,7 @@ function create_instructions_object(
         '<p><img src="js/img/piggy-bank.png" width="200"></p>' +
         '<p><b>The financial advisors</b></p>' +
         '<p>Each advisor specializes in <b>one specific pair of funds</b> and will only ever evaluate two funds.<br>' +
-        'For example, one advisor always evaluates Fund A vs Fund B.<br>' +
+        'For example, one advisor always evaluates Fund A vs Fund B,<br>' +
         'while another always evaluates Fund C vs Fund D.<br>' +
         'No two advisors evaluate the same pair of funds.</p>' +
         '<p>On each trial, you will see one advisor\'s endorsement and use it<br>' +
@@ -921,20 +921,13 @@ function create_instructions_object(
         'The advisor\'s endorsement reflects their <i>belief</i> about which fund is better -<br>' +
         'it does not necessarily reflect reality. Some advisors are more accurate than the others!</p>' +
         '<p>The piggy bank will change color to match the winning fund:<br>' +
-        '<table style="margin: auto; border-spacing: 20px;">' +
-        '<tr>' +
-        '<td style="text-align:center;"><img src="js/img/funda_piggybank.png" height="80"><br><b>Fund A won</b></td>' +
-        '<td style="text-align:center;"><img src="js/img/fundb_piggybank.png" height="80"><br><b>Fund B won</b></td>' +
-        '<td style="text-align:center;"><img src="js/img/fundc_piggybank.png" height="80"><br><b>Fund C won</b></td>' +
-        '<td style="text-align:center;"><img src="js/img/fundd_piggybank.png" height="80"><br><b>Fund D won</b></td>' +
-        '</tr>' +
-        '</table></p>' +
-        '<p>If you chose the <b>wrong fund</b>, warning signs will appear on either side of the piggy bank.</p>' +
-        '<p>Use this feedback to learn about each advisor\'s reliability.</p>'+
-        '<p>Between blocks, you will also see some trials <b>without feedback</b>.<br>' +
-        'This is normal - just give your best estimate based on what you have learned so far.</p>',
+        '<p>Here is an example of <b>correct</b> feedback - you selected Fund X and Fund X performed better:</p>' +
+        '<p><img src="js/img/correct_left.png" height="80"><img src="js/img/fundx_piggybank.png" height="80"></p>' +
+        '<p>Here is an example of <b>incorrect</b> feedback - you selected Fund X but Fund Y performed better:</p>' +
+        '<p><img src="js/img/warnig_left.png" height="80"><img src="js/img/fundy_piggybank.png" height="125"><img src="js/img/warning_right.png" height="80"></p>' +
+        '<p>Use this feedback to learn about each advisor\'s reliability.</p>' ,
 
-        //Page 6 - Structure 
+         //Page 6 - Structure 
         '<p><img src="js/img/piggy-bank.png" width="200"></p>'+
         '<p><b>Study structure</b></p>' +
         '<p> The study consists of <b>4 blocks</b> of trials.<br>' +
