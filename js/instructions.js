@@ -963,7 +963,7 @@ function create_instructions_object(
     'We were interested in how you adapted your trust in each advisor over time.</p>' +
     '<p>If you have any questions about this study or would like to withdraw your data,<br>' +
     'please contact: <b>meissene.bengana@etu.u-paris.fr</b></p>' +
-    '<p>This research is conducted by Meissene Bengana under the surpervision of<br>' +
+    '<p>This research is conducted by Meissene Bengana under the supervision of<br>' +
     'Dr. Mael Lebreton at the Paris School of Economics and Université Sorbonne Paris-1.</p>';
 
     instructions.after_game = new default_instruction_plugin([debrief]);
